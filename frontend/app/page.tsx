@@ -1,4 +1,6 @@
 import ProdutoCard from "./components/ProductCard";
+import Hero  from "./components/ui/hero/Hero";
+
 import { Produto } from "./interfaces/product.interface";
 
 async function getProducts(): Promise<Produto[]> {
@@ -24,17 +26,20 @@ export default async function HomePage() {
   console.log('Products:', products);
 
   return (
-    <main className="container mx-auto p-8">
-      <h1 className="text-4xl font-bold mb-8 text-white">Availabe in stock</h1>
-      {products.length === 0 ? (
-        <p>Sorry! We are out of stock.</p>
-      ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.map((product) => (
-          <ProdutoCard key={product.id} produto={product}/>
-      ))}
-        </div>
-      )}
-    </main>
+    <>
+      <Hero />
+      <main className="container mx-auto ">
+        <h1 className="text-4xl font-bold mb-8 text-white">Availabe in stock</h1>
+        {products.length === 0 ? (
+          <p>Sorry! We are out of stock.</p>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {products.map((product) => (
+            <ProdutoCard key={product.id} produto={product}/>
+        ))}
+          </div>
+        )}
+      </main>
+      </>
   );
 }
