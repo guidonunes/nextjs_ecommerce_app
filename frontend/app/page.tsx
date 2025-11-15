@@ -1,5 +1,6 @@
 import ProdutoCard from "./components/ProductCard";
 import Hero  from "./components/ui/hero/Hero";
+import { InfoSection } from "./components/ui/info/InfoSection";
 
 import { Produto } from "./interfaces/product.interface";
 
@@ -28,7 +29,9 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
+      <InfoSection />
       <main className="container mx-auto ">
+
         <h1 className="text-4xl font-bold mb-8 text-white">Availabe in stock</h1>
         {products.length === 0 ? (
           <p>Sorry! We are out of stock.</p>
