@@ -32,7 +32,7 @@ export default async function HomePage() {
       <InfoSection />
       <main className="container mx-auto ">
 
-        <h1 className="text-4xl font-bold mb-8 text-white">Availabe in stock</h1>
+        <h2 className="text-4xl font-bold mb-8 text-white">Availabe in stock</h2>
         {products.length === 0 ? (
           <p>Sorry! We are out of stock.</p>
         ) : (
