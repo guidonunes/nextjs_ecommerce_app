@@ -2,11 +2,50 @@
 import React from "react";
 import { SparklesCore } from "./sparkles";
 
+
+import { TypewriterEffectSmooth } from "./typewriter-effect";
+
+export function TypewriterEffectSmoothDemo() {
+  const words = [
+    {
+      text: "Find",
+      className: "text-white ",
+    },
+    {
+      text: "the",
+      className: "text-white ",
+    },
+    {
+      text: "best",
+      className: "text-white ",
+    },
+    {
+      text: "prices",
+      className: "text-white ",
+    },
+    {
+      text: "here.",
+      className: "text-red-500 ",
+    },
+  ];
+  return (
+    <div className="flex flex-col items-center justify-center  ">
+
+      <TypewriterEffectSmooth words={words} />
+    </div>
+  );
+}
+
+
+
+
+
+
 export default function Hero() {
   return (
-    <div className="h-[40rem]  w-full bg-black flex flex-col items-center justify-center overflow-hidden">
-      <h1 className="md:text-7xl text-3xl lg:text-9xl sm:text-6xl font-bold text-center text-white relative z-20">
-        Welco<span className="text-red-600">me</span>!
+    <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden">
+      <h1 className="text-9xl font-bold text-center text-white relative z-20">
+        <TypewriterEffectSmoothDemo />
       </h1>
       <div className="w-[40rem] h-40 relative">
         {/* Gradients */}
@@ -20,9 +59,9 @@ export default function Hero() {
           background="transparent"
           minSize={0.4}
           maxSize={1}
-          particleDensity={1200}
+          particleDensity={2500}
           className="w-full h-full"
-          particleColor="#FFFFFF"
+          particleColor="#FFA500"
         />
 
         {/* Radial Gradient to prevent sharp edges */}
