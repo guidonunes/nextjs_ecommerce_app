@@ -1,4 +1,5 @@
 import ProdutoCard from "./components/ProductCard";
+import { ProdutoCard3D } from "./components/ui/cards/CardsProduct";
 import Hero  from "./components/ui/hero/Hero";
 import { InfoSection } from "./components/ui/info/InfoSection";
 
@@ -30,15 +31,15 @@ export default async function HomePage() {
     <>
       <Hero />
       <InfoSection />
-      <main className="container mx-auto ">
+      <main className="container mx-auto mt-8 sm:mt-12 px-4 sm:px-6">
 
-        <h2 className="text-4xl font-bold mb-8 text-white">Availabe in stock</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-white"><span className="text-red-500">Availabe</span> in stock</h2>
         {products.length === 0 ? (
           <p>Sorry! We are out of stock.</p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {products.map((product) => (
-            <ProdutoCard key={product.id} produto={product}/>
+            <ProdutoCard3D key={product.id} produto={product}/>
         ))}
           </div>
         )}
