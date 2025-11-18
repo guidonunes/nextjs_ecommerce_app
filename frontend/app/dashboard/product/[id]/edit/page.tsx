@@ -59,7 +59,7 @@ export default function EditarProdutoPage() {
 
   return (
     <main className="container mx-auto p-8">
-      <h1 className="text-3xl font-bold mb-6">Editar Produto</h1>
+      <h1 className="text-3xl font-bold mb-6">Edit Product</h1>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4 bg-[#31394c] p-6 rounded shadow">
         {error && <p className="text-red-600">{error}</p>}
         <div>
@@ -78,7 +78,7 @@ export default function EditarProdutoPage() {
           <label className="block text-sm font-medium">Created at</label>
           <input value={produto.dataFabricacao} onChange={(e) => setProduto({ ...produto, dataFabricacao: e.target.value })} type="date" required className="mt-1 w-full p-2 border rounded" />
         </div>
-        <button className="w-full bg-amber-500 text-white py-2 rounded">Salvar Alterações</button>
+        <button className="w-full bg-amber-500 text-black py-2 rounded">Save</button>
       </form>
     </main>
   );
