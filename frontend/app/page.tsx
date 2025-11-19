@@ -1,9 +1,11 @@
-import ProdutoCard from "./components/ProductCard";
+
 import { ProdutoCard3D } from "./components/ui/cards/CardsProduct";
+
 import Hero  from "./components/ui/hero/Hero";
 import { InfoSection } from "./components/ui/info/InfoSection";
 
 import { Produto } from "./interfaces/product.interface";
+
 
 async function getProducts(): Promise<Produto[]> {
   try {
@@ -43,7 +45,10 @@ export default async function HomePage() {
         ))}
           </div>
         )}
+
+
       </main>
+
       </>
   );
 }

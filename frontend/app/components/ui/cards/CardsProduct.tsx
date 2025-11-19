@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+
 import Image from "next/image";
 // import Link from 'next/link'; // Changed to <a> tag to resolve compilation issue
 import { CardBody, CardContainer, CardItem } from "./3d-card"; // Assuming ./3d-card is the correct path
@@ -11,12 +11,10 @@ interface ProdutoCardProps {
   produto: Produto;
 }
 
-/**
- * Maps product names to their corresponding image files
- */
+
 const getProductImage = (productName: string): string => {
   const name = productName.toLowerCase();
-  
+
   if (name.includes("playstation 4") || name.includes("ps4")) {
     return "/ps4pro.jpg";
   } else if (name.includes("playstation 5") || name.includes("ps5")) {
@@ -30,7 +28,7 @@ const getProductImage = (productName: string): string => {
   } else if (name.includes("smartphone") || name.includes("phone")) {
     return "/smartphone.jpg";
   }
-  
+
   // Default fallback image
   return "/laptop.jpg";
 };
