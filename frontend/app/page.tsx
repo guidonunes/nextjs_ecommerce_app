@@ -6,6 +6,7 @@ import { InfoSection } from "./components/ui/info/InfoSection";
 
 import { Produto } from "./interfaces/product.interface";
 
+export const dynamic = 'force-dynamic';
 
 async function getProducts(): Promise<Produto[]> {
   try {
