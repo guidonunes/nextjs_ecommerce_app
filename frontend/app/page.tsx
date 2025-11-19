@@ -9,7 +9,9 @@ import { Produto } from "./interfaces/product.interface";
 
 async function getProducts(): Promise<Produto[]> {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_LOCAL_URL}/api/dashboard/products`,
+    const baseUrl = process.env.NEXT_PUBLIC_LOCAL_URL || 
+                    (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000');
+    const res = await fetch(`${baseUrl}/api/dashboard/products`,
       {cache: 'no-store'}
     );
 
